@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauricio Villarreal · Brand Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0E1B2C;
+      --navy-mid: #152234;
+      --silver: #7B8590;
+      --light: #EEF1F4;
+      --white: #FAFAF8;
+      --bg: #F0F2F4;
+      --gold: #C9A96E;
+      --text-body: #2C3540;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text-body);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(14,27,44,0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--light);
+    }
+    .nav-logo em {
+      font-style: italic;
+      color: var(--silver);
+      font-weight: 300;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+    }
+    nav ul a {
+      text-decoration: none;
+      color: var(--silver);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    nav ul a:hover { color: var(--gold); }
+
+    /* ── COVER ── */
+    .cover {
+      height: 100vh;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 55%, rgba(14,27,44,0.04) 0%, transparent 70%);
+    }
+
+    .cover-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 3.5rem;
+    }
+
+    /* LOGO PRINCIPAL */
+    .logo-wordmark {
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-line1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      display: block;
+    }
+
+    .logo-line2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      color: var(--silver);
+      letter-spacing: 0.01em;
+      line-height: 1;
+      display: block;
+    }
+
+    .logo-tagline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .logo-tagline-line {
+      height: 1px;
+      width: 3rem;
+      background: var(--silver);
+      opacity: 0.5;
+    }
+
+    .logo-tagline-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    .cover-sub {
+      margin-top: 4rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(123,133,144,0.6);
+    }
+
+    .cover-bottom-line {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--silver), transparent);
+      opacity: 0.25;
+    }
+
+    /* ── LAYOUT ── */
+    section {
+      padding: 7rem 3rem;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .section-full {
+      max-width: 100%;
+      padding: 7rem 0;
+    }
+
+    .section-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+
+    .section-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 0.86rem;
+      color: #4a5568;
+      max-width: 62ch;
+      line-height: 1.85;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0.35;
+    }
+
+    .dark-section { background: var(--navy); }
+    .dark-section h2 { color: var(--light); }
+    .dark-section p { color: var(--silver); }
+
+    /* ── PAGE CHAPTER ── */
+    .page-chapter {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .chapter-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      color: #e8eaec;
+      line-height: 1;
+    }
+    .chapter-info {
+      border-left: 1px solid #e0e0e0;
+      padding-left: 1.5rem;
+    }
+
+    /* ── LOGO SECTION ── */
+    /* Logo sobre distintos fondos */
+    .logo-bg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 3rem;
+    }
+
+    .logo-bg-cell {
+      padding: 3.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      min-height: 260px;
+      position: relative;
+    }
+
+    .logo-bg-cell.bg-light  { background: var(--bg); }
+    .logo-bg-cell.bg-white  { background: #ffffff; border: 1px solid #eee; }
+    .logo-bg-cell.bg-dark   { background: var(--navy); }
+    .logo-bg-cell.bg-mid    { background: #d5d9de; }
+
+    .cell-logo { text-align: center; }
+
+    .cell-logo .l1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      display: block;
+    }
+    .cell-logo .l2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 2.4rem;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      display: block;
+    }
+    .cell-logo .lt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+    }
+    .cell-logo .lt span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.42rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    .cell-logo .lt hr {
+      border: none;
+      height: 1px;
+      width: 1.5rem;
+      opacity: 0.5;
+    }
+
+    /* dark */
+    .bg-dark .l1 { color: var(--light); }
+    .bg-dark .l2 { color: var(--silver); }
+    .bg-dark .lt span { color: var(--silver); }
+    .bg-dark .lt hr { background: var(--silver); }
+
+    /* light / white */
+    .bg-light .l1, .bg-white .l1 { color: var(--navy); }
+    .bg-light .l2, .bg-white .l2 { color: var(--silver); }
+    .bg-light .lt span, .bg-white .lt span { color: var(--silver); }
+    .bg-light .lt hr, .bg-white .lt hr { background: var(--silver); }
+
+    /* mid */
+    .bg-mid .l1 { color: var(--navy); }
+    .bg-mid .l2 { color: #4a5568; }
+    .bg-mid .lt span { color: #4a5568; }
+    .bg-mid .lt hr { background: #4a5568; }
+
+    .cell-label {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.2rem;
+      font-size: 0.52rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .bg-dark .cell-label { color: var(--silver); }
+    .bg-light .cell-label, .bg-white .cell-label, .bg-mid .cell-label { color: var(--silver); }
+
+    /* Isotipo */
+    .isotipo-showcase {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid #eee;
+    }
+
+    .isotipo-grid {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-end;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .isotipo-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .iso-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .iso-box.dark-box { background: var(--navy); }
+    .iso-box.light-box { background: var(--bg); }
+
+    .iso-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .dark-box .iso-mark .im { color: var(--light); }
+    .dark-box .iso-mark .iv { color: var(--silver); }
+    .light-box .iso-mark .im { color: var(--navy); }
+    .light-box .iso-mark .iv { color: var(--silver); }
+
+    .iso-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--silver);
+      text-align: center;
+    }
+
+    /* Clearspace */
+    .clearspace-wrap {
+      margin-top: 4rem;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .clearspace-visual {
+      position: relative;
+      width: 280px;
+      height: 200px;
+      flex-shrink: 0;
+    }
+    .cs-outer {
+      position: absolute;
+      inset: 0;
+      border: 1px dashed rgba(201,169,110,0.35);
+    }
+    .cs-inner {
+      position: absolute;
+      inset: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .cs-arrows {
+      position: absolute;
+    }
+    .cs-top    { top: 0; left: 50%; width: 1px; height: 28px; background: rgba(201,169,110,0.5); }
+    .cs-bottom { bottom: 0; left: 50%; width: 1px; height: 28px; background: rgba(201,169,110,0.5); }
+    .cs-left   { left: 0; top: 50%; height: 1px; width: 28px; background: rgba(201,169,110,0.5); }
+    .cs-right  { right: 0; top: 50%; height: 1px; width: 28px; background: rgba(201,169,110,0.5); }
+
+    /* Usos incorrectos */
+    .donts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .dont-item { border: 1px solid #eee; overflow: hidden; }
+    .dont-visual {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--bg);
+    }
+    .dont-bar {
+      padding: 0.75rem 1.2rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .dont-bar.bad  { background: #fee2e2; color: #dc2626; }
+
+    .badge {
+      position: absolute;
+      top: 0.6rem; right: 0.6rem;
+      width: 1.4rem; height: 1.4rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 600;
+      background: #dc2626; color: white;
+    }
+
+    /* ── COLORS ── */
+    .color-palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .color-swatch { border-radius: 3px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .swatch-color { height: 110px; }
+    .swatch-info {
+      padding: 0.9rem 1rem;
+      background: white;
+      border: 1px solid #eee;
+      border-top: none;
+    }
+    .swatch-name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.25rem; }
+    .swatch-hex  { font-size: 0.68rem; color: var(--silver); font-family: 'Courier New', monospace; }
+    .swatch-rgb  { font-size: 0.6rem; color: #bbb; font-family: 'Courier New', monospace; margin-top: 0.15rem; }
+
+    /* proportions */
+    .prop-bar {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-end;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .prop-item { text-align: center; }
+    .prop-fill { width: 72px; }
+    .prop-lbl  { font-size: 0.6rem; margin-top: 0.5rem; color: var(--silver); line-height: 1.5; }
+
+    /* ── TYPOGRAPHY ── */
+    .type-showcase { margin-top: 3rem; }
+    .type-row {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .type-meta { padding-top: 0.3rem; }
+    .type-label { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver); margin-bottom: 0.4rem; }
+    .type-specs { font-size: 0.65rem; color: #bbb; line-height: 1.9; font-family: 'Courier New', monospace; }
+
+    .ex-display {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .ex-display-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--silver);
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
+    .ex-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .ex-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+    .ex-body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.85;
+      max-width: 54ch;
+    }
+
+    /* ── VOICE ── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .voice-card {
+      padding: 1.8rem 2rem;
+      border: 1px solid #eee;
+    }
+    .voice-card.do   { border-left: 3px solid var(--gold); }
+    .voice-card.dont { border-left: 3px solid #ddd; }
+    .voice-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.6rem; }
+    .voice-card.dark-card h4 { color: var(--light); }
+    .voice-card.dark-card p { color: var(--silver); max-width: 100%; }
+    .voice-card p { font-size: 0.8rem; max-width: 100%; }
+    .vtag {
+      display: inline-block;
+      font-size: 0.52rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+    .vtag.do-tag   { background: rgba(201,169,110,0.12); color: var(--gold); }
+    .vtag.dont-tag { background: #f5f5f5; color: #aaa; }
+    .vtag.dont-dark { background: rgba(255,255,255,0.06); color: var(--silver); }
+
+    .taglines { margin-top: 3rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    .tagline-item {
+      padding: 1.4rem 2rem;
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .tagline-num { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--silver); min-width: 2rem; }
+    .tagline-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.35rem; font-weight: 300; color: var(--light); }
+
+    /* ── APPLICATIONS ── */
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 3rem;
+    }
+    .app-card {
+      padding: 2.5rem;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .app-card.dark  { background: var(--navy); }
+    .app-card.light { background: white; border: 1px solid #eee; }
+    .app-card.fog   { background: var(--bg); }
+    .app-card.gold  { background: var(--gold); }
+
+    .app-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+    }
+    .app-card.dark h4  { color: var(--light); }
+    .app-card.light h4 { color: var(--navy); }
+    .app-card.fog h4   { color: var(--navy); }
+    .app-card.gold h4  { color: var(--navy); }
+    .app-card p { font-size: 0.76rem; max-width: 100%; }
+    .app-card.dark p  { color: var(--silver); }
+    .app-card.gold p  { color: var(--navy); opacity: 0.7; }
+
+    /* letterhead mock */
+    .mock-paper {
+      background: white;
+      padding: 1.5rem;
+      border: 1px solid #eee;
+      width: 100%;
+      max-width: 280px;
+      margin-top: auto;
+    }
+    .mock-lh-logo { text-align: left; }
+    .mock-lh-logo .ml1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      display: block;
+    }
+    .mock-lh-logo .ml2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--silver);
+      letter-spacing: 0.01em;
+      line-height: 1;
+      display: block;
+    }
+    .mock-lh-logo .mlt {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+    }
+    .mock-lh-logo .mlt span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.38rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+    .mock-lh-logo .mlt hr { border: none; height: 1px; width: 1rem; background: var(--silver); opacity: 0.4; }
+    .mock-divider { height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 0.8rem 0; opacity: 0.45; }
+    .mock-body-text { font-size: 0.55rem; color: var(--silver); line-height: 1.7; }
+
+    /* business card mock */
+    .mock-bc {
+      width: 210px;
+      height: 118px;
+      background: var(--navy);
+      padding: 1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .mock-bc-logo .bcl1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--light);
+      letter-spacing: 0.02em;
+      display: block;
+      line-height: 1;
+    }
+    .mock-bc-logo .bcl2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--silver);
+      letter-spacing: 0.01em;
+      display: block;
+      line-height: 1;
+    }
+    .mock-bc-logo .bclt {
+      display: flex; align-items: center; gap: 0.3rem; margin-top: 0.3rem;
+    }
+    .mock-bc-logo .bclt span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.32rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+    .mock-bc-logo .bclt hr { border: none; height: 1px; width: 0.8rem; background: var(--silver); opacity: 0.4; }
+    .mock-bc-info {
+      font-size: 0.52rem;
+      color: var(--silver);
+      letter-spacing: 0.08em;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 4rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo .fl1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: var(--light);
+      letter-spacing: 0.02em;
+      display: block;
+      line-height: 1;
+    }
+    .footer-logo .fl2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--silver);
+      letter-spacing: 0.01em;
+      display: block;
+      line-height: 1;
+    }
+    .footer-logo .flt {
+      display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;
+    }
+    .footer-logo .flt span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+    .footer-logo .flt hr { border: none; height: 1px; width: 1.5rem; background: var(--silver); opacity: 0.4; }
+    .footer-info { text-align: right; font-size: 0.62rem; color: var(--silver); letter-spacing: 0.1em; line-height: 1.9; }
+
+    /* ── PRINCIPLES ── */
+    .principles-list {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .principle { padding-top: 1.4rem; border-top: 1px solid var(--gold); }
+    .principle-num { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); font-weight: 300; line-height: 1; margin-bottom: 0.6rem; }
+    .principle h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 0.45rem; }
+    .principle p { font-size: 0.78rem; max-width: 100%; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .cover-eyebrow { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+    .logo-wordmark { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+    .cover-sub     { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .logo-bg-grid, .voice-grid, .app-grid, .donts-grid { grid-template-columns: 1fr; }
+      .type-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 2rem; }
+      .footer-info { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Mauricio <em>Villarreal</em></div>
+  <ul>
+    <li><a href="#identidad">Identidad</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#colores">Colores</a></li>
+    <li><a href="#tipografia">Tipografía</a></li>
+    <li><a href="#voz">Voz</a></li>
+    <li><a href="#aplicaciones">Aplicaciones</a></li>
+  </ul>
+</nav>
+
+<!-- COVER -->
+<div class="cover">
+  <p class="cover-eyebrow">Brand Identity System</p>
+
+  <div class="logo-wordmark">
+    <span class="logo-line1">Mauricio</span>
+    <span class="logo-line2">Villarreal</span>
+    <div class="logo-tagline">
+      <div class="logo-tagline-line"></div>
+      <div class="logo-tagline-text">Odontología Estética</div>
+      <div class="logo-tagline-line"></div>
+    </div>
+  </div>
+
+  <p class="cover-sub">Guía de Identidad de Marca · 2025</p>
+  <div class="cover-bottom-line"></div>
+</div>
+
+<!-- ── 01 IDENTIDAD ── -->
+<section id="identidad">
+  <div class="page-chapter">
+    <div class="chapter-num">01</div>
+    <div class="chapter-info">
+      <div class="section-label">Fundamentos</div>
+      <h2>Identidad & Esencia</h2>
+    </div>
+  </div>
+
+  <p>La identidad de Mauricio Villarreal Odontología Estética descansa sobre la convicción de que la belleza dental es el resultado de la ciencia aplicada con sensibilidad artística. Cada elemento visual —el logo, la paleta, la tipografía— fue concebido para comunicar autoridad clínica y elegancia discreta en partes iguales.</p>
+
+  <div class="principles-list">
+    <div class="principle">
+      <div class="principle-num">I</div>
+      <h4>Confianza clínica</h4>
+      <p>La identidad proyecta competencia médica. El paciente debe sentir que está en manos de un experto antes de entrar al consultorio.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">II</div>
+      <h4>Elegancia sobria</h4>
+      <p>Estética sin ostentación. La belleza de la marca es la misma que buscamos en los resultados del tratamiento: natural y duradera.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">III</div>
+      <h4>Personalización</h4>
+      <p>El nombre del doctor como marca es una declaración: aquí hay una persona responsable, no una corporación anónima.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">IV</div>
+      <h4>Calidez profesional</h4>
+      <p>El tono nunca es frío ni intimidante. La sofisticación es siempre accesible, nunca excluyente.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 02 LOGO ── -->
+<section id="logo">
+  <div class="page-chapter">
+    <div class="chapter-num">02</div>
+    <div class="chapter-info">
+      <div class="section-label">Sistema de Logo</div>
+      <h2>Logo Principal & Variaciones</h2>
+    </div>
+  </div>
+
+  <p>El logo de Mauricio Villarreal está compuesto por tres elementos: el nombre <strong style="font-weight:500; color:var(--navy);">Mauricio</strong> en Cormorant Garamond redonda (peso 400), el apellido <em style="color:var(--silver);">Villarreal</em> en cursiva ligera (peso 300) en plata, y el descriptor <strong style="font-weight:500; letter-spacing:0.08em; color:var(--silver);">ODONTOLOGÍA ESTÉTICA</strong> en Montserrat versalitas flanqueado por líneas decorativas. La dualidad tipográfica —romana y cursiva— evoca precisión y sensibilidad.</p>
+
+  <!-- Variaciones sobre fondos -->
+  <div class="logo-bg-grid">
+
+    <div class="logo-bg-cell bg-light">
+      <div class="cell-logo">
+        <span class="l1">Mauricio</span>
+        <span class="l2">Villarreal</span>
+        <div class="lt">
+          <hr><span>Odontología Estética</span><hr>
+        </div>
+      </div>
+      <div class="cell-label">Positivo — Fondo gris claro (principal)</div>
+    </div>
+
+    <div class="logo-bg-cell bg-white">
+      <div class="cell-logo">
+        <span class="l1">Mauricio</span>
+        <span class="l2">Villarreal</span>
+        <div class="lt">
+          <hr><span>Odontología Estética</span><hr>
+        </div>
+      </div>
+      <div class="cell-label">Positivo — Fondo blanco</div>
+    </div>
+
+    <div class="logo-bg-cell bg-dark">
+      <div class="cell-logo">
+        <span class="l1">Mauricio</span>
+        <span class="l2">Villarreal</span>
+        <div class="lt">
+          <hr><span>Odontología Estética</span><hr>
+        </div>
+      </div>
+      <div class="cell-label">Negativo — Fondo marino</div>
+    </div>
+
+    <div class="logo-bg-cell bg-mid">
+      <div class="cell-logo">
+        <span class="l1">Mauricio</span>
+        <span class="l2">Villarreal</span>
+        <div class="lt">
+          <hr><span>Odontología Estética</span><hr>
+        </div>
+      </div>
+      <div class="cell-label">Monocromático — Fondos medios</div>
+    </div>
+
+  </div>
+
+  <!-- ISOTIPO -->
+  <div class="isotipo-showcase">
+    <div class="section-label">Isotipo MV</div>
+    <p>El monograma MV es el símbolo reducido de la marca. Se usa cuando el espacio no permite el logo completo: favicon, redes sociales, sellos, bordados. No reemplaza al logo principal en ningún documento oficial.</p>
+
+    <div class="isotipo-grid">
+      <div class="isotipo-cell">
+        <div class="iso-box dark-box" style="width:96px; height:96px; border-radius:12px;">
+          <div class="iso-mark" style="font-size:3rem;">
+            <span class="im">M</span><span class="iv">V</span>
+          </div>
+        </div>
+        <div class="iso-label">96×96 px<br>App / Favicon</div>
+      </div>
+      <div class="isotipo-cell">
+        <div class="iso-box dark-box" style="width:64px; height:64px; border-radius:8px;">
+          <div class="iso-mark" style="font-size:2rem;">
+            <span class="im">M</span><span class="iv">V</span>
+          </div>
+        </div>
+        <div class="iso-label">64×64 px<br>Avatar</div>
+      </div>
+      <div class="isotipo-cell">
+        <div class="iso-box dark-box" style="width:40px; height:40px; border-radius:6px;">
+          <div class="iso-mark" style="font-size:1.3rem;">
+            <span class="im">M</span><span class="iv">V</span>
+          </div>
+        </div>
+        <div class="iso-label">40×40 px<br>UI / Botón</div>
+      </div>
+      <div class="isotipo-cell">
+        <div class="iso-box light-box" style="width:64px; height:64px; border-radius:8px;">
+          <div class="iso-mark" style="font-size:2rem;">
+            <span class="im">M</span><span class="iv">V</span>
+          </div>
+        </div>
+        <div class="iso-label">Sobre fondo claro</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clearspace -->
+  <div class="clearspace-wrap">
+    <div class="clearspace-visual">
+      <div class="cs-outer"></div>
+      <div class="cs-inner">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--navy); font-weight:400; letter-spacing:0.02em; display:block; line-height:1;">Mauricio</span>
+        <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--silver); font-weight:300; font-style:italic; letter-spacing:0.01em; display:block; line-height:1;">Villarreal</span>
+        <div style="display:flex; align-items:center; gap:0.4rem; margin-top:0.4rem;">
+          <div style="height:1px; width:1rem; background:var(--silver); opacity:0.4;"></div>
+          <span style="font-family:'Montserrat',sans-serif; font-size:0.35rem; font-weight:500; letter-spacing:0.25em; text-transform:uppercase; color:var(--silver);">Odontología Estética</span>
+          <div style="height:1px; width:1rem; background:var(--silver); opacity:0.4;"></div>
+        </div>
+      </div>
+      <div class="cs-top cs-arrows"></div>
+      <div class="cs-bottom cs-arrows"></div>
+      <div class="cs-left cs-arrows"></div>
+      <div class="cs-right cs-arrows"></div>
+    </div>
+    <div>
+      <h3>Área de protección</h3>
+      <p>El espacio de respeto mínimo equivale a la altura de la letra "M" en cada lado del logo. Ningún elemento debe invadir esta zona.</p>
+      <p style="margin-top:0.8rem;">Tamaño mínimo: <strong style="color:var(--navy);">120px</strong> en digital · <strong style="color:var(--navy);">30mm</strong> en impresión.</p>
+    </div>
+  </div>
+
+  <!-- Usos incorrectos -->
+  <div style="margin-top:4rem;">
+    <div class="section-label">Usos Incorrectos</div>
+    <div class="donts-grid">
+      <div class="dont-item">
+        <div class="dont-visual">
+          <div class="badge">✕</div>
+          <div style="text-align:center;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#e65c00; font-weight:400; display:block;">Mauricio</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#ffd600; font-weight:300; font-style:italic; display:block;">Villarreal</span>
+          </div>
+        </div>
+        <div class="dont-bar bad">No alterar los colores</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-visual">
+          <div class="badge">✕</div>
+          <div style="text-align:center;">
+            <span style="font-family:'Arial',sans-serif; font-size:1.4rem; color:var(--navy); font-weight:bold; display:block;">MAURICIO</span>
+            <span style="font-family:'Arial',sans-serif; font-size:1.4rem; color:var(--silver); display:block;">Villarreal</span>
+          </div>
+        </div>
+        <div class="dont-bar bad">No cambiar la tipografía</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-visual">
+          <div class="badge">✕</div>
+          <div style="text-align:center; transform:rotate(-12deg);">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--navy); font-weight:400; display:block;">Mauricio</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--silver); font-weight:300; font-style:italic; display:block;">Villarreal</span>
+          </div>
+        </div>
+        <div class="dont-bar bad">No rotar ni distorsionar</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-visual" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+          <div class="badge">✕</div>
+          <div style="text-align:center; opacity:0.6;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:white; font-weight:400; display:block;">Mauricio</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#ddd; font-weight:300; font-style:italic; display:block;">Villarreal</span>
+          </div>
+        </div>
+        <div class="dont-bar bad">No usar sobre fondos no aprobados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 03 COLORES ── -->
+<section id="colores">
+  <div class="page-chapter">
+    <div class="chapter-num">03</div>
+    <div class="chapter-info">
+      <div class="section-label">Paleta Cromática</div>
+      <h2>Sistema de Color</h2>
+    </div>
+  </div>
+
+  <p>La paleta parte del azul marino profundo como color institucional —que evoca confianza, profundidad y seriedad clínica— y se equilibra con plata y niebla para comunicar sofisticación sin frialdad. El dorado actúa como acento de lujo, reservado para detalles premium.</p>
+
+  <div class="color-palette">
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#0E1B2C;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Navy</div>
+        <div class="swatch-hex">#0E1B2C</div>
+        <div class="swatch-rgb">RGB 14 / 27 / 44</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#7B8590;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Silver</div>
+        <div class="swatch-hex">#7B8590</div>
+        <div class="swatch-rgb">RGB 123 / 133 / 144</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#EEF1F4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Fog</div>
+        <div class="swatch-hex">#EEF1F4</div>
+        <div class="swatch-rgb">RGB 238 / 241 / 244</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#C9A96E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Gold</div>
+        <div class="swatch-hex">#C9A96E</div>
+        <div class="swatch-rgb">RGB 201 / 169 / 110</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#FAFAF8;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Ivory</div>
+        <div class="swatch-hex">#FAFAF8</div>
+        <div class="swatch-rgb">RGB 250 / 250 / 248</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#F0F2F4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">MV Cloud</div>
+        <div class="swatch-hex">#F0F2F4</div>
+        <div class="swatch-rgb">RGB 240 / 242 / 244</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:3rem;">Proporciones de Uso</div>
+  <div class="prop-bar">
+    <div class="prop-item">
+      <div class="prop-fill" style="height:150px; background:var(--navy);"></div>
+      <div class="prop-lbl">60%<br>Navy<br>(fondo principal)</div>
+    </div>
+    <div class="prop-item">
+      <div class="prop-fill" style="height:90px; background:var(--silver);"></div>
+      <div class="prop-lbl">30%<br>Silver / Fog<br>(secundario)</div>
+    </div>
+    <div class="prop-item">
+      <div class="prop-fill" style="height:30px; background:var(--gold);"></div>
+      <div class="prop-lbl">10%<br>Gold<br>(acento)</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 04 TIPOGRAFÍA ── -->
+<section id="tipografia">
+  <div class="page-chapter">
+    <div class="chapter-num">04</div>
+    <div class="chapter-info">
+      <div class="section-label">Sistema Tipográfico</div>
+      <h2>Tipografía</h2>
+    </div>
+  </div>
+
+  <p>El sistema usa dos familias. <strong style="color:var(--navy);font-weight:500;">Cormorant Garamond</strong> para display y titulares —en sus versiones romana y cursiva, reflejando la dualidad del logo— y <strong style="color:var(--navy);font-weight:500;">Montserrat</strong> en peso ligero para todo texto funcional, etiquetas y descriptores clínicos.</p>
+
+  <div class="type-showcase">
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-label">Display Redonda</div>
+        <div class="type-specs">Cormorant Garamond<br>Regular, Weight 400<br>Tracking: +0.02em<br>Uso: nombre "Mauricio"</div>
+      </div>
+      <div class="ex-display">Mauricio</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-label">Display Cursiva</div>
+        <div class="type-specs">Cormorant Garamond<br>Italic, Weight 300<br>Tracking: +0.01em<br>Uso: "Villarreal", titulares</div>
+      </div>
+      <div class="ex-display-italic">Villarreal</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-label">Titular H2</div>
+        <div class="type-specs">Cormorant Garamond<br>Light, Weight 300<br>Tracking: –0.01em<br>Uso: Secciones, encabezados</div>
+      </div>
+      <div class="ex-h2">La sonrisa que mereces,<br>con la precisión que exiges.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-label">Descriptor / Label</div>
+        <div class="type-specs">Montserrat<br>Medium, Weight 500<br>Tracking: +0.30em<br>UPPERCASE</div>
+      </div>
+      <div class="ex-label">Odontología Estética · Diseño de Sonrisa</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-label">Cuerpo de Texto</div>
+        <div class="type-specs">Montserrat<br>Light, Weight 300<br>Size: 14–16px<br>Leading: 1.85</div>
+      </div>
+      <div class="ex-body">Cada tratamiento es diseñado para el rostro, la personalidad y las expectativas de cada paciente. La odontología estética no es solo técnica: es la convergencia de la ciencia con una visión artística del resultado.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 05 VOZ Y TONO ── -->
+<section id="voz" class="section-full dark-section">
+  <div class="section-inner">
+    <div class="page-chapter">
+      <div class="chapter-num">05</div>
+      <div class="chapter-info">
+        <div class="section-label" style="color:var(--silver);">Comunicación</div>
+        <h2>Voz & Tono</h2>
+      </div>
+    </div>
+
+    <p>La voz de Mauricio Villarreal es la de un especialista que escucha antes de hablar. Informado, sereno y cercano. Nunca usa tecnicismos innecesarios ni promete resultados que no puede garantizar. Habla de personas, no de casos.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card do dark-card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); border-left-color:var(--gold);">
+        <div class="vtag do-tag">Hacemos esto</div>
+        <h4>Expertos y cercanos</h4>
+        <p>Demostramos conocimiento sin distancia. El paciente se siente en manos de alguien que sabe y que también le importa su caso.</p>
+      </div>
+      <div class="voice-card do dark-card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); border-left-color:var(--gold);">
+        <div class="vtag do-tag">Hacemos esto</div>
+        <h4>Claros y precisos</h4>
+        <p>Explicamos los tratamientos de forma comprensible. La transparencia genera confianza antes, durante y después del proceso.</p>
+      </div>
+      <div class="voice-card dont dark-card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); border-left-color:rgba(255,255,255,0.12);">
+        <div class="vtag dont-dark">Evitamos esto</div>
+        <h4 style="color:var(--silver);">Lenguaje clínico frío</h4>
+        <p>No usamos jerga médica para impresionar. Si el paciente no lo entiende, no lo comunicamos bien.</p>
+      </div>
+      <div class="voice-card dont dark-card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); border-left-color:rgba(255,255,255,0.12);">
+        <div class="vtag dont-dark">Evitamos esto</div>
+        <h4 style="color:var(--silver);">Promesas exageradas</h4>
+        <p>No prometemos "sonrisas perfectas en 24 horas". La credibilidad es nuestro activo más valioso.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem;">
+      <div class="section-label" style="color:var(--silver);">Frases de Marca</div>
+      <div class="taglines">
+        <div class="tagline-item">
+          <div class="tagline-num">01</div>
+          <div class="tagline-text">Tu sonrisa, diseñada con propósito.</div>
+        </div>
+        <div class="tagline-item">
+          <div class="tagline-num">02</div>
+          <div class="tagline-text">Donde la precisión y la estética convergen.</div>
+        </div>
+        <div class="tagline-item">
+          <div class="tagline-num">03</div>
+          <div class="tagline-text">Odontología con criterio artístico.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 06 APLICACIONES ── -->
+<section id="aplicaciones">
+  <div class="page-chapter">
+    <div class="chapter-num">06</div>
+    <div class="chapter-info">
+      <div class="section-label">Aplicaciones</div>
+      <h2>Implementación de Marca</h2>
+    </div>
+  </div>
+
+  <p>El sistema de marca se aplica de forma coherente en todos los puntos de contacto con el paciente: desde la papelería física hasta la presencia digital y el ambiente del consultorio.</p>
+
+  <div class="app-grid">
+
+    <!-- Membrete -->
+    <div class="app-card light">
+      <div>
+        <div class="section-label">01</div>
+        <h4>Papelería Corporativa</h4>
+        <p style="font-size:0.76rem; margin-top:0.4rem;">Membrete, sobre y hoja de receta. El logo completo siempre en la parte superior izquierda.</p>
+      </div>
+      <div class="mock-paper">
+        <div class="mock-lh-logo">
+          <span class="ml1">Mauricio</span>
+          <span class="ml2">Villarreal</span>
+          <div class="mlt"><hr><span>Odontología Estética</span><hr></div>
+        </div>
+        <div class="mock-divider"></div>
+        <div class="mock-body-text">
+          Av. Insurgentes Sur 1234, Consultorio 5<br>
+          Ciudad de México · +52 55 0000 0000<br>
+          contacto@mauriciovillarreal.com
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta -->
+    <div class="app-card dark">
+      <div>
+        <div class="section-label" style="color:var(--silver);">02</div>
+        <h4>Tarjeta de Visita</h4>
+        <p style="font-size:0.76rem; margin-top:0.4rem;">Formato 85×54mm. Cartulina 400gr, acabado mate con logo en relieve seco o foil dorado.</p>
+      </div>
+      <div class="mock-bc">
+        <div class="mock-bc-logo">
+          <span class="bcl1">Mauricio</span>
+          <span class="bcl2">Villarreal</span>
+          <div class="bclt"><hr><span>Odontología Estética</span><hr></div>
+        </div>
+        <div class="mock-bc-info">
+          Dr. Mauricio Villarreal<br>
+          Especialista en Odontología Estética<br>
+          +52 55 0000 0000
+        </div>
+      </div>
+    </div>
+
+    <!-- Digital -->
+    <div class="app-card fog">
+      <div>
+        <div class="section-label">03</div>
+        <h4>Presencia Digital</h4>
+        <p style="font-size:0.76rem; margin-top:0.4rem;">Favicon, avatar de redes y firma de email. Se usa el isotipo MV en fondos navy.</p>
+      </div>
+      <div style="margin-top:2rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+        <div style="width:72px; height:72px; background:var(--navy); display:flex; align-items:center; justify-content:center; border-radius:14px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:2.1rem; font-weight:300; color:var(--light); letter-spacing:-0.04em;">M<span style="color:var(--silver);">V</span></div>
+        </div>
+        <div style="width:44px; height:44px; background:var(--navy); display:flex; align-items:center; justify-content:center; border-radius:8px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.35rem; font-weight:300; color:var(--light); letter-spacing:-0.04em;">M<span style="color:var(--silver);">V</span></div>
+        </div>
+        <div style="width:28px; height:28px; background:var(--navy); display:flex; align-items:center; justify-content:center; border-radius:5px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.85rem; font-weight:300; color:var(--light); letter-spacing:-0.04em;">MV</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Señalética -->
+    <div class="app-card gold">
+      <div>
+        <div class="section-label" style="color:rgba(14,27,44,0.45);">04</div>
+        <h4>Señalética & Consultorio</h4>
+        <p style="font-size:0.76rem; margin-top:0.4rem;">Logo en metal cepillado o vinilo cortado sobre fondo navy o blanco. Siempre con área de protección respetada.</p>
+      </div>
+      <div style="margin-top:2rem; padding:1.5rem 2rem; background:var(--navy); display:inline-block;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:400; color:var(--light); letter-spacing:0.02em; display:block; line-height:1;">Mauricio</span>
+        <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; font-style:italic; color:var(--silver); letter-spacing:0.01em; display:block; line-height:1;">Villarreal</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 07 CIERRE ── -->
+<section>
+  <div class="page-chapter">
+    <div class="chapter-num">07</div>
+    <div class="chapter-info">
+      <div class="section-label">Protección</div>
+      <h2>Uso y Licencia</h2>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; flex-wrap:wrap;">
+    <div>
+      <h3>¿Quién puede usar esta marca?</h3>
+      <p>Los activos de marca son de uso exclusivo de colaboradores autorizados del consultorio, agencias con contrato vigente y proveedores aprobados. Cualquier uso externo requiere aprobación por escrito.</p>
+    </div>
+    <div>
+      <h3>Archivos y consultas</h3>
+      <p>Para obtener archivos maestros (SVG, PDF, PNG) o resolver dudas sobre aplicación de marca, contactar directamente al responsable de comunicación del consultorio.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem; padding:2rem 2.5rem; background:var(--navy); display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+    <div>
+      <div style="font-size:0.58rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--silver); margin-bottom:0.4rem;">Versión del documento</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--light);">Brand Book v1.0 · 2025</div>
+      <div style="font-size:0.65rem; color:var(--silver); margin-top:0.3rem;">Revisión anual. Vigente hasta nueva emisión.</div>
+    </div>
+    <div style="text-align:center;">
+      <span style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.4rem; color:var(--light); letter-spacing:0.02em; display:block; line-height:1;">Mauricio</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-weight:300; font-style:italic; font-size:1.4rem; color:var(--silver); letter-spacing:0.01em; display:block; line-height:1;">Villarreal</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <span class="fl1">Mauricio</span>
+    <span class="fl2">Villarreal</span>
+    <div class="flt"><hr><span>Odontología Estética</span><hr></div>
+  </div>
+  <div class="footer-info">
+    Brand Identity System<br>
+    Documento confidencial · 2025<br>
+    Todos los derechos reservados
+  </div>
+</footer>
+
+</body>
+</html>
